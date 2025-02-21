@@ -44,14 +44,14 @@ if(isset($_GET['num1']) && isset($_GET['num2']) && isset($_GET['oper'])) {
 </head>
 <body>
     <form action='index.php' method='get'>
-            <input type='number' name='num1' value='<?= $_GET['num1'] ?? '' ?>'>
+            <input type='number' name='num1' value='<?= $_GET['num1'] ?? '' ?>' min='0'>
         <select name='oper'>
             <option value='+'>+</option>
             <option value='-'>-</option>
             <option value='*'>*</option>
             <option value='/'>/</option>
         </select>
-            <input type='number' name='num2' value='<?= $_GET['num2'] ?? '' ?>'>
+            <input type='number' name='num2' value='<?= $_GET['num2'] ?? '' ?>' min='0'>
         <button>=</button>
         <input type='number' name='result' value='<?= $result ?>' readonly>
     </form>
